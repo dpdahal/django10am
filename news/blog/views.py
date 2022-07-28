@@ -5,11 +5,22 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    data = {
+        'title': 'Welcome',
+        'users': [
+            {'name': 'ram', 'address': 'kathmandu'},
+            {'name': 'sita', 'address': 'pokhara'},
+            {'name': 'gita', 'address': 'kathmandu'},
+        ]
+    }
+    return render(request, 'index.html', data)
 
 
 def about(request):
-    return render(request, 'about.html')
+    data = {
+        'title': 'about-us'
+    }
+    return render(request, 'about.html', data)
 
 
 def contact(request):
