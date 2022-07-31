@@ -11,20 +11,25 @@ def index(request):
             {'name': 'ram', 'address': 'kathmandu'},
             {'name': 'sita', 'address': 'pokhara'},
             {'name': 'gita', 'address': 'kathmandu'},
-        ]
+        ],
+        'user': 'Sophia'
     }
     return render(request, 'index.html', data)
 
 
 def about(request):
     data = {
-        'title': 'about-us'
+        'title': 'about-us',
+
     }
     return render(request, 'about.html', data)
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    data = {
+
+    }
+    return render(request, 'contact.html', data)
 
 
 def education(request, criteria):
